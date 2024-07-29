@@ -1,0 +1,21 @@
+
+<h4 *ngIf="!electronicsData" class="text-primary mt-3 text-center">Loading Eelctronics data ...</h4>
+
+<div style="display: flex; flex-wrap: wrap;">
+  <div *ngFor="let data of electronicsData">
+    <div class="card mt-4 d-flex align-items-stretch" style="width: 18rem">
+      <img
+        src="{{ data.image }}"
+        style="height: 38vh"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ data.title }}</h5>
+        <p class="card-text">{{ data.description }}</p>
+        <button class="btn btn-primary">Rating- {{ data.rating.rate }}</button>
+        <button class="btn btn-primary">Count- {{ data.rating.count }}</button>
+      </div>
+    </div>
+  </div>
+</div>
